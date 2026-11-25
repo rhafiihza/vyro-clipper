@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VYRO</string>
     <string name="tagline">Every Moment, Made Powerful.</string>
+    <!-- TODO: Replace with your OAuth Web Client ID from Google Cloud Console -->
+    <!-- See docs/youtube-setup-guide.md for instructions -->
+    <string name="google_oauth_client_id">YOUR_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com</string>
+    <string name="default_web_client_id">YOUR_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com</string>
 </resources>
