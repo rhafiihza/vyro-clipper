@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="VYRO — On-device video clipping, scoring, transcription & live capture for Android. Every Moment, Made Powerful.">
+<meta name="theme-color" content="#0D0F12">
+<meta property="og:title" content="VYRO — Every Moment, Made Powerful">
+<meta property="og:description" content="On-device video clipping, scoring, transcription & live capture for Android.">
+<meta property="og:type" content="website">
+<title>VYRO — Every Moment, Made Powerful</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0D0F12;--surface:#15181D;--surfaceAlt:#20242A;
+--text:#F4F5F7;--muted:#9BA3AE;
+--primary:#FF713D;--primaryGrad:linear-gradient(135deg,#FF8954,#FF6A2B);
+--purple:#A855F7;--purpleDeep:#8B5CF6;
+--success:#7FD99A;--danger:#FF6B6B;
+--pink:#EC4899;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--primary);text-decoration:none}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{text-align:center;padding:80px 24px 60px;background:radial-gradient(ellipse at 50% 0%,rgba(255,113,61,.12),transparent 50%)}
+.hero h1{font-size:3.5rem;font-weight:800;letter-spacing:-2px;margin-bottom:8px}
+.hero h1 span{background:var(--primaryGrad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .tagline{font-size:1.3rem;color:var(--muted);margin-bottom:32px;font-style:italic}
+.hero .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.badge{background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:6px 14px;font-size:.8rem;color:var(--muted);font-weight:500}
+.badge.live{border-color:var(--pink);color:var(--pink)}
+.badge.device{border-color:var(--success);color:var(--success)}
+.badge.ai{border-color:var(--purple);color:var(--purple)}
+
+/* Download button */
+.download-btn{display:inline-flex;align-items:center;gap:10px;background:var(--primaryGrad);color:#17100C;font-weight:700;font-size:1.1rem;padding:16px 40px;border-radius:14px;border:none;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .2s;box-shadow:0 8px 24px rgba(255,113,61,.3)}
+.download-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,113,61,.4)}
+.download-btn:active{transform:translateY(0)}
+.download-btn svg{width:24px;height:24px}
+.download-info{margin-top:12px;font-size:.85rem;color:var(--muted)}
+
+/* Features */
+.features{padding:60px 24px}
+.features h2{text-align:center;font-size:2rem;font-weight:700;margin-bottom:40px;letter-spacing:-.5px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.feature-card{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:17px;padding:24px;transition:border-color .2s}
+.feature-card:hover{border-color:rgba(255,113,61,.3)}
+.feature-card .icon{font-size:2rem;margin-bottom:12px}
+.feature-card h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.feature-card p{font-size:.9rem;color:var(--muted);line-height:1.5}
+.feature-card .tag{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:12px}
+.tag-mvp{background:rgba(127,217,154,.15);color:var(--success)}
+.tag-future{background:rgba(155,163,174,.15);color:var(--muted)}
+
+/* Links section */
+.links{padding:40px 24px;text-align:center}
+.links h2{font-size:1.5rem;font-weight:700;margin-bottom:24px}
+.link-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.link-btn{background:var(--surfaceAlt);color:var(--text);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 24px;font-weight:600;font-size:.9rem;text-decoration:none;transition:border-color .2s}
+.link-btn:hover{border-color:var(--primary);color:var(--primary)}
+
+/* Footer */
+footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--primary)}
+
+/* Product suite */
+.suite{padding:40px 24px}
+.suite h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:30px}
+.suite-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.suite-card{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;text-align:center}
+.suite-card h3{font-size:1rem;font-weight:700;margin-bottom:4px}
+.suite-card .status{font-size:.75rem;font-weight:600;margin-top:8px}
+.suite-card .status.live{color:var(--success)}
+.suite-card .status.future{color:var(--muted)}
+.suite-card p{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+@media(max-width:640px){
+.hero h1{font-size:2.5rem}
+.hero .tagline{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="container">
+<div class="badges">
+<span class="badge device">100% On-Device</span>
+<span class="badge ai">Classical Intelligence</span>
+<span class="badge live">Live Clipper</span>
+</div>
+<h1><span>VYRO</span></h1>
+<p class="tagline">Every Moment, Made Powerful.</p>
+<p style="color:var(--muted);max-width:560px;margin:0 auto 32px">On-device video clipping, scoring, transcription, and live-chat-triggered capture for Android. No cloud. No generative AI. Just pure local processing.</p>
+<a class="download-btn" href="#download">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4h14v2H5v-2z"/></svg>
+Download APK
+</a>
+<p class="download-info">v2.1 · 9.4 MB · Android 8.0+ (API 26+) · Debug build</p>
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+<h2>What VYRO Does</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="icon">🎬</div>
+<h3>Smart Clip Discovery</h3>
+<p>Paste a YouTube link and get ranked short clips with scores, captions, and hooks — all processed on your phone.</p>
+<span class="tag tag-mvp">MVP</span>
+</div>
+<div class="feature-card">
+<div class="icon">📺</div>
+<h3>Live Clipper</h3>
+<p>Monitor YouTube Live chat with EWMA spike detection. Auto-capture hype moments or tap Clip now manually.</p>
+<span class="tag tag-mvp">MVP</span>
+</div>
+<div class="feature-card">
+<div class="icon">📝</div>
+<h3>On-Device Transcription</h3>
+<p>English and Indonesian transcription via sherpa-onnx. No cloud, no Whisper API, no data leaving your device.</p>
+<span class="tag tag-mvp">MVP</span>
+</div>
+<div class="feature-card">
+<div class="icon">🎨</div>
+<h3>Full Timeline Editor</h3>
+<p>Trim, captions, music, memes, zoom, hooks. Clip Open and Clip Closed modes with context-aware tools.</p>
+<span class="tag tag-mvp">MVP</span>
+</div>
+<div class="feature-card">
+<div class="icon">📤</div>
+<h3>YouTube Auto-Publish</h3>
+<p>Sign in with Google and upload clips directly to your YouTube channel. OAuth 2.0 PKCE flow, resumable uploads.</p>
+<span class="tag tag-mvp">MVP</span>
+</div>
+<div class="feature-card">
+<div class="icon">⚡</div>
+<h3>VYRO Studio</h3>
+<p>Full multi-track timeline editor with keyframes, transitions, and advanced effects. Expands the current editor.</p>
+<span class="tag tag-future">Future</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="suite">
+<div class="container">
+<h2>The VYRO Suite</h2>
+<div class="suite-grid">
+<div class="suite-card">
+<h3>VYRO Clips</h3>
+<p>Smart clip discovery from long-form VOD</p>
+<div class="status live">Available Now</div>
+</div>
+<div class="suite-card">
+<h3>VYRO Live</h3>
+<p>Livestream moment capture with chat-spike detection</p>
+<div class="status live">Available Now</div>
+</div>
+<div class="suite-card">
+<h3>VYRO Studio</h3>
+<p>Full timeline video editor</p>
+<div class="status future">Coming Soon</div>
+</div>
+<div class="suite-card">
+<h3>VYRO AI</h3>
+<p>On-device content assist</p>
+<div class="status future">Exploration</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="links" id="download">
+<div class="container">
+<h2>Download & Legal</h2>
+<div class="link-grid">
+<a class="link-btn" href="https://github.com/rhafiihza/vyro-clipper/releases">Download APK</a>
+<a class="link-btn" href="/privacy-policy">Privacy Policy</a>
+<a class="link-btn" href="/terms-of-service">Terms of Service</a>
+<a class="link-btn" href="https://github.com/rhafiihza/vyro-clipper">GitHub Repo</a>
+<a class="link-btn" href="https://github.com/rhafiihza/vyro-clipper/blob/main/docs/youtube-setup-guide.md">Setup Guide</a>
+</div>
+<p style="margin-top:20px;color:var(--muted);font-size:.8rem">VYRO, VYRO Clips, VYRO Live, VYRO Studio, and VYRO AI are creative naming proposals, not trademark-cleared names.</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>VYRO v2.1 · Every Moment, Made Powerful. · <a href="mailto:rhafiihza@gmail.com">Contact</a></p>
+</div>
+</footer>
+
+</body>
+</html>
